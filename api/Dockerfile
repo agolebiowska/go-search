@@ -1,11 +1,9 @@
-FROM golang:1.10.0
+FROM golang:1.13.3
 
 RUN adduser --disabled-password --gecos '' api
 USER api
 
-WORKDIR /go/src/app
+WORKDIR /go/src/app/api
 COPY . .
 
-RUN go install -v ./...
-
-CMD [ "app" ]
+CMD [ "go", "run", "main.go" ]
