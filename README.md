@@ -1,34 +1,26 @@
-# go-search
+# Go search
 
- Basic search engine
+Basic search engine
 
-### Setup
+## Installation
 
-> requires go & dep
-
-```shell
-$ cd api
-$ dep ensure
-```
-
-> build and run services
+Build & run.
 
 ```shell
 $ docker-compose up -d --build
 ```
-
-> populate elasticsearch with dummy data
+Populate elasticsearch with dummy data.
 
 ```shell
 $ curl -X POST http://localhost:8080/documents -d @mock-data.json -H "Content-Type: application/json"
 ```
-
-> try it with curl
+## Usage
+Try it with curl...
 ```shell
 $ curl http://localhost:8080/search?query=my+query
 ```
 
-> or fire up a vue client
+or fire up a Vue client.
 ```shell
 $ cd client
 $ yarn install
